@@ -1,0 +1,67 @@
+/* Put your css in here */
+
+.carousel {
+  width: 100px;
+  height: 100px;
+  border: solid black 1px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel_item {
+//  background-color: pink;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.carousel_thumbnail {
+  display: inline-block;
+  border: solid black 1px;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 2px;
+  
+}
+
+.selected {
+  background-color: lightblue;
+  color: black;
+}
+
+.example-repeat-enter-setup,
+.example-repeat-leave-setup,
+.example-repeat-move-setup {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -ms-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.example-repeat-enter-setup {
+  left: -100%;
+}
+.example-repeat-enter-setup.example-repeat-enter-start {
+  left: 0;
+  
+}
+
+.example-repeat-leave-setup {
+  margin-left: 0%;
+}
+.example-repeat-leave-setup.example-repeat-leave-start {
+  margin-left: 100%;
+}
+
+.example-repeat-move-setup { }
+.example-repeat-move-setup.example-repeat-move-start { }
+

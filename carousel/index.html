@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="plunker" >
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Plunker</title>
+  <script>document.write('<base href="' + document.location + '" />');</script>
+  <link rel="stylesheet" href="style.css">
+  <script src="http://code.angularjs.org/1.1.4/angular.js"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="MainCtrl">
+  Hello {{name}}!
+  <div>
+    <input type="range" min="0" max="{{data.length}}" ng-model="currentItem">
+    {{currentItem}}
+  </div>
+  <div class="carousel">
+    <div class="carousel_item" ng-repeat="item in data | justone:currentItem"
+      ng-animate="{enter: 'example-repeat-enter',
+                    leave: 'example-repeat-leave',
+                    move: 'example-repeat-move'}"
+    >{{item}}</div>
+  </div>
+  <a href="" class="carousel_thumbnail" ng-repeat="item in data" ng-click="goto($index)" ng-class="{selected: currentItem  == $index }">{{$index}}</a>
+</body>
+</html>
